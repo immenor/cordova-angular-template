@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Futura LT Bold";
+  src: url('/stylesheets/fonts/FuturaLT-Bold.eot');
+  src: url('/stylesheets/fonts/FuturaLT-Bold.eot?#iefix') format('eot'), url('/stylesheets/fonts/FuturaLT-Bold.woff') format('woff'), url('/stylesheets/fonts/FuturaLT-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Futura LT Light";
+  src: url('/stylesheets/fonts/FuturaLT-Light.eot');
+  src: url('/stylesheets/fonts/FuturaLT-Light.eot?#iefix') format('eot'), url('/stylesheets/fonts/FuturaLT-Light.woff') format('woff'), url('/stylesheets/fonts/FuturaLT-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "HelvetiicaNeueLT Std Thin";
+  src: url('/stylesheets/fonts/HelveticaNeueLTStd-Th.eot');
+  src: url('/stylesheets/fonts/HelveticaNeueLTStd-Th.eot?#iefix') format('eot'), url('/stylesheets/fonts/HelveticaNeueLTStd-Th.woff') format('woff'), url('/stylesheets/fonts/HelveticaNeueLTStd-Th.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT Std Bold";
+  src: url('/stylesheets/fonts/HelveticaNeueLTStd-Bd.eot');
+  src: url('/stylesheets/fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('eot'), font-fHelvetiles("HelveticaNeueLTStd-Bd.woff", woff, "HelveticaNeueLTStd-Bd.otf", opentype);
+}
+
+@font-face {
+  font-family: "HelveticaNeueLT Std Light";
+  src: url('/stylesheets/fonts/HelveticaNeueLTStd-Lt.eot');
+  src: url('/stylesheets/fonts/HelveticaNeueLTStd-Lt.eot?#iefix') format('eot'), url('/stylesheets/fonts/HelveticaNeueLTStd-Lt.woff') format('woff'), url('/stylesheets/fonts/HelveticaNeueLTStd-Lt.otf') format('opentype');
+}
+
+/* line 5, ../sass/screen.sass */
+body {
+  font-family: "HelvetiicaNeueLT Std Thin", sans-serif;
+  font-size: 1.5em;
+  color: white;
+  background-color: #eec23d;
+  margin: 0px;
+}
+
+/* line 11, ../sass/screen.sass */
+.container {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 15, ../sass/screen.sass */
+.app {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 364px;
+}
+
+/* line 33, ../sass/screen.sass */
+.viewTitle {
+  text-align: center;
+  font-size: 18px;
+}
+/* line 36, ../sass/screen.sass */
+.viewTitle h1 {
+  font-size: 19px;
+}
+
+/* line 40, ../sass/screen.sass */
+.viewContent .chirpFeed {
+  margin: 0;
+  padding: 0;
+}
+/* line 44, ../sass/screen.sass */
+.viewContent .chirpFeed .chirp {
+  background-color: white;
+  color: black;
+  padding: 1em;
+  list-style: none;
+  margin-bottom: 0.8em;
+  margin-left: none;
+}
