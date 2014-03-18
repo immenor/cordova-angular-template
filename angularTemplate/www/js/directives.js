@@ -50,18 +50,20 @@ directives.directive('pullDown', function() {
 	return {
 		restrict: 'AE',
 		scope: {
-			theContainer: '=?'
+			theContainer: '=?',
+			theTrigger: '=?'
 		},
 		// transclude: true,
 		//template: '<span ng-transclude></span>',
 		controller: function($scope, $log) {
 			$scope.container = document.getElementById($scope.theContainer);
-			$scope.hammertime = new Hammer(container);
+			$scope.trigger = document.getElementById($scope.theTrigger);
+			$scope.hammertime = new Hammer($scope.trigger);
 			$scope.dragCount = 0;
-			$scope.breakpoint = 160;
+			$scope.breakpoint = 300;
 
 			$scope.slidedown_height = 0;
-			$scope.slideup_height = 160;
+			$scope.slideup_height = 500;
 			$scope.anim = null;
 			$scope.draggedDown = false;
 
@@ -132,13 +134,13 @@ directives.directive('pullDown', function() {
 			                    	// over the breakpoint, trigger the callback
 			                    	if(ev.gesture.deltaY >= $scope.breakpoint) {
 			                    		$scope.container.className = 'animating';
-			                        	$scope.setHeight(160);
+			                        	$scope.setHeight(500);
 			                        	$scope.opened = true;
 			                        	$scope.reset();
-			                        	$scope.originY = 160;
-			                        	if ($scope.slidedown_height > 160) {
-					                    	$scope.slidedown_height = 160;
-					                    	$scope.originY = 160;
+			                        	$scope.originY = 500;
+			                        	if ($scope.slidedown_height > 500) {
+					                    	$scope.slidedown_height = 500;
+					                    	$scope.originY = 500;
 					                    }
 			                    	}  else {
 
@@ -160,16 +162,16 @@ directives.directive('pullDown', function() {
 			                        	$scope.opened = false;
 			                        	$scope.reset();
 			                        	$scope.originY = 0;
-			                      //   	if ($scope.slidedown_height > 160) {
-					                    // 	$scope.slidedown_height = 160;
+			                      //   	if ($scope.slidedown_height > 500) {
+					                    // 	$scope.slidedown_height = 500;
 					                    // 	$scope.originY = $scope.slidedown_height;
 					                    // }
 			                    	} else {
 
 				                        $scope.container.className = 'animating';
-				                        $scope.originY = 160;
+				                        $scope.originY = 500;
 				                        $scope.opened = true;
-				                        $scope.setHeight(160);
+				                        $scope.setHeight(500);
 				                        $scope.reset();		
 				                    }
 			                    	
