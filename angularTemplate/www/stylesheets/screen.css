@@ -35,9 +35,14 @@ body {
   color: white;
   background-color: #eec23d;
   margin: 0px;
+  padding: 0px;
+}
+/* line 12, ../sass/screen.sass */
+body p {
+  margin-top: 0;
 }
 
-/* line 11, ../sass/screen.sass */
+/* line 14, ../sass/screen.sass */
 .container {
   *zoom: 1;
   max-width: 59em;
@@ -47,42 +52,57 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 38, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 15, ../sass/screen.sass */
+/* line 18, ../sass/screen.sass */
 .app {
   position: absolute;
   left: 0;
   top: 0;
-  width: 364px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 26, ../sass/screen.sass */
+#hiddenContent {
+  position: absolute;
+  top: 90px;
+}
+
+/* line 29, ../sass/screen.sass */
+#yes {
+  padding-top: 0.7em;
+  width: 100%;
+  background-color: white;
 }
 
 /* line 33, ../sass/screen.sass */
-.viewTitle {
-  text-align: center;
-  font-size: 18px;
+#container {
+  width: 100%;
 }
-/* line 36, ../sass/screen.sass */
-.viewTitle h1 {
-  font-size: 19px;
+/* line 35, ../sass/screen.sass */
+#container .animating {
+  -o-transition: -o-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
 }
 
 /* line 40, ../sass/screen.sass */
-.viewContent .chirpFeed {
+#menuBar {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
-}
-/* line 44, ../sass/screen.sass */
-.viewContent .chirpFeed .chirp {
   background-color: white;
   color: black;
   padding: 1em;
-  list-style: none;
-  margin-bottom: 0.8em;
-  margin-left: none;
+  height: 100%;
+  width: 100%;
 }

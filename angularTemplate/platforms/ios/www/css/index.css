@@ -113,3 +113,63 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+/*phonegap default stuff above here*/
+
+
+/* common */
+.squareButton {
+	height: 60px;
+	width: 60px;
+	background-repeat: no-repeat;
+}
+.giantSquareButton {
+    height: 210px;
+    width: 210px;
+	background-repeat: no-repeat;
+}
+.play {
+	background-image: url(../img/play.png);
+	height: 60px;
+	width: 60px;
+	background-repeat: no-repeat;
+}
+.pause {
+	background-image: url(../img/pause.png);
+	height: 60px;
+	width: 60px;
+	background-repeat: no-repeat;
+}
+
+/* canary css */
+.backgroundFake {
+	height: 620px;
+	width: 300;
+	background-repeat: no-repeat;
+}
+.topMenu {
+	top: 20px;
+}
+#playButton {
+	position: absolute;
+	top: 190px;
+	left:30px;
+}
+#recordButton {
+	position: absolute;
+	top: 535px;
+	left:150px;
+}
+#timer {
+	position: absolute;
+	top: 38px;
+	left: 74px;
+}
+#recordButtonPlayback {
+    left: 74px;
+}
+.feedView {
+    background-image: url(../img/feed_screen.png);
+}
+.recordView {
+	background-image: url(../img/record_screen.png);
+}

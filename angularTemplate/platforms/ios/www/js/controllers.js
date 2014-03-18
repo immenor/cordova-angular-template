@@ -1,7 +1,5 @@
-angular.module('angularTemplate.controllers', [])
+angular.module('template.controllers', [])
     .controller('MainCtrl', ['$scope', '$window', function ($scope, $window) {
-
-    		$scope.title = 'I am the main controller';
-    		
+        $scope.title = 'Test App';
 	}])
 ;
