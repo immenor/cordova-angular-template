@@ -56,14 +56,16 @@ directives.directive('pullDown', function() {
 		// transclude: true,
 		//template: '<span ng-transclude></span>',
 		controller: function($scope, $log) {
+			var windowHeight = $(window).height();
+			$scope.targetHeight = windowHeight / 2;
 			$scope.container = document.getElementById($scope.theContainer);
 			$scope.trigger = document.getElementById($scope.theTrigger);
 			$scope.hammertime = new Hammer($scope.trigger);
 			$scope.dragCount = 0;
-			$scope.breakpoint = 300;
+			$scope.breakpoint = $scope.targetHeight / 2;
 
 			$scope.slidedown_height = 0;
-			$scope.slideup_height = 500;
+			$scope.slideup_height = $scope.targetHeight;
 			$scope.anim = null;
 			$scope.draggedDown = false;
 
@@ -134,13 +136,13 @@ directives.directive('pullDown', function() {
 			                    	// over the breakpoint, trigger the callback
 			                    	if(ev.gesture.deltaY >= $scope.breakpoint) {
 			                    		$scope.container.className = 'animating';
-			                        	$scope.setHeight(500);
+			                        	$scope.setHeight($scope.targetHeight);
 			                        	$scope.opened = true;
 			                        	$scope.reset();
-			                        	$scope.originY = 500;
-			                        	if ($scope.slidedown_height > 500) {
-					                    	$scope.slidedown_height = 500;
-					                    	$scope.originY = 500;
+			                        	$scope.originY = $scope.targetHeight;
+			                        	if ($scope.slidedown_height > $scope.targetHeight) {
+					                    	$scope.slidedown_height = $scope.targetHeight;
+					                    	$scope.originY = $scope.targetHeight;
 					                    }
 			                    	}  else {
 
@@ -169,9 +171,9 @@ directives.directive('pullDown', function() {
 			                    	} else {
 
 				                        $scope.container.className = 'animating';
-				                        $scope.originY = 500;
+				                        $scope.originY = $scope.targetHeight;
 				                        $scope.opened = true;
-				                        $scope.setHeight(500);
+				                        $scope.setHeight($scope.targetHeight);
 				                        $scope.reset();		
 				                    }
 			                    	

@@ -25,6 +25,7 @@ body
   overflow: hidden
 #triggerArea
   position: relative
+  margin-top: 2em
   left: -1em
   background-color: $yellow
   height: 4em
@@ -37,16 +38,24 @@ body
   icon
     line-height: 2em
 
+#titleBar
+  background-color: white
+  position: relative
+  height: .9em
+  +box-shadow
+
 #hiddenContent
   position: absolute
-  top: 90px
-  margin-left: 1em
+  bottom: 60%
+  right: 10%
+  font-weight: bolder
+  //letter-spacing: 1px
+  +text-shadow()
 #yes
-  padding-top: .7em
+  //padding-top: .8em
   width: 100%
   background-color: white
 #container
-  +box-shadow
   width: 100%
   .animating
     -o-transition: -o-transform .3s
@@ -54,6 +63,7 @@ body
     -moz-transition: -moz-transform .3s
     -webkit-transition: -webkit-transform .3s
 #menuBar
+  +box-shadow
   position: absolute
   top: 0
   left: 0
