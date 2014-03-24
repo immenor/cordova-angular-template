@@ -117,6 +117,7 @@ directives.directive('pullDown', function() {
 	            $scope.anim = null;
 	            $scope.draggedDown = false;
 	            $scope.draggedUp = false;
+	            //$scope.slidedown_height = 0;
 	            setTimeout(function(){
 	            	$scope.container.className = '';
 	            }, 500)	
@@ -140,17 +141,21 @@ directives.directive('pullDown', function() {
 			                        	$scope.opened = true;
 			                        	$scope.reset();
 			                        	$scope.originY = $scope.targetHeight;
-			                        	if ($scope.slidedown_height > $scope.targetHeight) {
-					                    	$scope.slidedown_height = $scope.targetHeight;
-					                    	$scope.originY = $scope.targetHeight;
-					                    }
+			                        	// get ready for your attack run
+				                        $scope.slidedown_height = $scope.targetHeight;
+			                      //   	if ($scope.slidedown_height > $scope.targetHeight) {
+					                    // 	$scope.slidedown_height = $scope.targetHeight;
+					                    // 	$scope.originY = $scope.targetHeight;
+					                    // }
 			                    	}  else {
 
 				                        $scope.container.className = 'animating';
 				                        $scope.originY = 0;
 				                        $scope.opened = false;
 				                        $scope.setHeight(0);
-				                        $scope.reset();		
+				                        $scope.reset();
+				                        // get ready for your attack run
+				                        $scope.slidedown_height = 0;		
 				                    }
 			                    	
 		                    	}
@@ -163,6 +168,9 @@ directives.directive('pullDown', function() {
 			                        	$scope.setHeight(0);
 			                        	$scope.opened = false;
 			                        	$scope.reset();
+			                        	// get ready for your attack run
+				                        $scope.slidedown_height = 0;	
+			                        	//$scope.slidedown_height = 0;
 			                        	$scope.originY = 0;
 			                      //   	if ($scope.slidedown_height > 500) {
 					                    // 	$scope.slidedown_height = 500;
@@ -174,7 +182,9 @@ directives.directive('pullDown', function() {
 				                        $scope.originY = $scope.targetHeight;
 				                        $scope.opened = true;
 				                        $scope.setHeight($scope.targetHeight);
-				                        $scope.reset();		
+				                        $scope.reset();	
+				                        // get ready for your attack run
+				                        $scope.slidedown_height = $scope.targetHeight;		
 				                    }
 			                    	
 			                    	
