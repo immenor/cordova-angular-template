@@ -1,11 +1,38 @@
 <div id="container" ng-controller="MainCtrl">
-	<p id="hiddenContent">...REVEAL </br> YOURSELF!</p>
-	<div id="titleBar"></div>
-	<img id="yes" src="http://suyts.files.wordpress.com/2012/12/image44.png"></img>
-	<div id="menuBar" pull-down the-container="'menuBar'" the-trigger="'triggerArea'"> 
-		<div id="triggerArea">
-			<icon class="fa fa-bars fa-2x"></icon>
-			<!-- <p>I am the...</p> -->
-		</div>
-	</div>
+    <h1>Interface Design {{interface.length}}</h1>
+    <p id="hiddenContent">...REVEAL </br> YOURSELF!</p>
+    <div id="titleBar"></div>
+    <img id="yes" src="http://suyts.files.wordpress.com/2012/12/image44.png"/>
+    <div id="menuBar" pull-down the-container="'menuBar'" the-trigger="'triggerArea'">
+        <div id="triggerArea">
+            <icon class="fa fa-bars fa-2x"></icon>
+            <!-- <p>I am the...</p> -->
+        </div>
+        <div id="portfolioContent">
+
+            <h1>Interface Design {{interface.length}}</h1>
+            <div ng-repeat="interfaceExample in interfaceExamples" class="portfolioElement">
+                <img ng-src="{{ interfaceExample.image }}" />
+                <p>{{ interfaceExample.name }}</p>
+                <p>{{ interfaceExample.description }}</p>
+            </div>
+
+            <h1>Identity Design</h1>
+            <div ng-repeat="identityExample in identityExamples" class="portfolioElement">
+                <img ng-src="{{ identityExample.image }}" />
+                <p>{{ identityExample.name }}</p>
+                <p>{{ identityExample.description }}</p>
+            </div>
+
+            <h1>Music Design {{music.length}}</h1>
+            <div ng-repeat="musicExample in musicExamples" class="portfolioElement">
+                <img ng-src="{{ musicExample.image }}" />
+                <p>{{ musicExample.name }}</p>
+                <p>{{ musicExample.description }}</p>
+            </div>
+
+        </div>
+    </div>
+
+
 </div>

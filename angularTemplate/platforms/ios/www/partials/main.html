@@ -7,5 +7,17 @@
 			<icon class="fa fa-bars fa-2x"></icon>
 			<!-- <p>I am the...</p> -->
 		</div>
+        <div id="portfolioContent">
+
+                <h1>Interface Design</h1>
+                no
+                <div ng-repeat="interface in interfaces">
+                    <img src="../images/{{interfaceElements[interface].thumbnail}}" />
+                    <p>{{ interfaceElements[interface].name }}</p>
+                    <p>{{ interfaceElements[interface].description }}</p>
+                </div>
+
+        </div>
 	</div>
+
 </div>
