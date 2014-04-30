@@ -3,14 +3,25 @@
 
 @import base
 body
-  font-family: "HelvetiicaNeueLT Std Thin", sans-serif
+  font-family: "Futura","HelvetiicaNeueLT Std Thin", sans-serif
   font-size: 1.5em
   color: $base
-  background-color: $yellow
+  background-color: white
   margin: 0px
   padding: 0px
   p
     margin-top: 0
+  h1
+    color: $blue
+  h2
+    color: $secondary-dark
+    font-weight: bolder
+    font-size: .7em
+    text-transform: uppercase
+  h3
+    color: $secondary-darkest
+    font-size: .5em
+    text-transform: uppercase
 .container
   +container
   //+susy-grid-background
@@ -25,21 +36,32 @@ body
   overflow: hidden
 #triggerArea
   position: relative
-  margin-top: 2em
-  left: -1em
-  background-color: $yellow
-  height: 4em
-  width: 4em
   margin-left: auto
   margin-right: auto
   text-align: center
-  color: white
+  font-size: .8em
+  icon
+    color: $blue
+    display: inline-block
+  p
+    color: $secondary-dark
+    display: inline-block
+    font-weight: lighter
+    text-transform: uppercase
+    margin-left: 1em
+    margin-right: 1em
+  span
+    color: $blue
+    text-transform: uppercase
+    margin-left: 1em
+    margin-right: 1em
+    font-weight: lighter
   +border-radius(50%)
   icon
     line-height: 2em
 
 #titleBar
-  background-color: white
+  background-color: $secondary-dark
   position: relative
   height: .9em
   +box-shadow
@@ -63,23 +85,64 @@ body
     -moz-transition: -moz-transform .3s
     -webkit-transition: -webkit-transform .3s
 #menuBar
-  +box-shadow
+  //+box-shadow
   position: absolute
+  border-top: 2px solid $secondary-dark
   top: 0
   left: 0
   margin: 0
   padding: 0
-  background-color: white
+  background-color: $secondary-light
   color: black
   padding: 1em
   height: 100%
   width: 100%
-
+#detailsContainer
+  +span-columns(12 omega, 12)
+  #contact
+    +span-columns(3, 12)
+    text-align: right
+    margin-top: 1em
+    a
+      text-decoration: none
+      display: block
+      font-weight: lighter
+    $colors: $blue , $green, $red, $secondary-dark
+    @for $i from 1 through length($colors)
+      a:nth-child(#{length($colors)}n+#{$i})
+        color: nth($colors, $i)
+        &:hover
+          color: darken(nth($colors, $i), 20)
+  #photo
+    +span-columns(1, 12)
+    img
+      +border-radius(50%)
+      height: 6em
+      margin:
+        top: .5em
+  #title
+    +span-columns(8 omega, 12)
+    text-align: left
+    h1
+      font-size: 1.2em
+      font-weight: bolder
+      text-transform: uppercase
+      margin-bottom: 0
+      span
+        font-weight: lighter
+    h2
+      font-size: .7em
+      font-weight: lighter
+    p
+      color: $secondary-darkest
+      font-weight: lighter
+      font-size: .5em
+      text-transform: lowercase
 #portfolioContent
-  width: 100%
   text-align: center
   overflow-y: auto
-
+  .category
+    +span-columns(12 omega, 12)
 
 .portfolioElement
   +float(left)

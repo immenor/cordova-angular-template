@@ -57,7 +57,7 @@ directives.directive('pullDown', function() {
 		//template: '<span ng-transclude></span>',
 		controller: function($scope, $log) {
 			var windowHeight = $(window).height();
-			$scope.targetHeight = windowHeight / 2;
+			$scope.targetHeight = windowHeight / 6;
 			$scope.container = document.getElementById($scope.theContainer);
 			$scope.trigger = document.getElementById($scope.theTrigger);
 			$scope.hammertime = new Hammer($scope.trigger);

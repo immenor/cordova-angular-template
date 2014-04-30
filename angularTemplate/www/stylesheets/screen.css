@@ -1,9 +1,9 @@
 /* line 5, ../sass/screen.sass */
 body {
-  font-family: "HelvetiicaNeueLT Std Thin", sans-serif;
+  font-family: "Futura", "HelvetiicaNeueLT Std Thin", sans-serif;
   font-size: 1.5em;
-  color: white;
-  background-color: #eec23d;
+  color: #473f3b;
+  background-color: white;
   margin: 0px;
   padding: 0px;
 }
@@ -11,22 +11,42 @@ body {
 body p {
   margin-top: 0;
 }
-
 /* line 14, ../sass/screen.sass */
+body h1 {
+  color: #77c8e1;
+}
+/* line 16, ../sass/screen.sass */
+body h2 {
+  color: #a99a89;
+  font-weight: bolder;
+  font-size: 0.7em;
+  text-transform: uppercase;
+}
+/* line 21, ../sass/screen.sass */
+body h3 {
+  color: #473f3b;
+  font-size: 0.5em;
+  text-transform: uppercase;
+}
+
+/* line 25, ../sass/screen.sass */
 .container {
   *zoom: 1;
-  margin: auto;
-  width: 61em;
-  max-width: 100%;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
 }
-/* line 38, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 18, ../sass/screen.sass */
+/* line 29, ../sass/screen.sass */
 .app {
   position: absolute;
   left: 0;
@@ -36,32 +56,49 @@ body p {
   overflow: hidden;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 37, ../sass/screen.sass */
 #triggerArea {
   position: relative;
-  margin-top: 2em;
-  left: -1em;
-  background-color: #eec23d;
-  height: 4em;
-  width: 4em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: white;
+  font-size: 0.8em;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 38, ../sass/screen.sass */
+/* line 43, ../sass/screen.sass */
+#triggerArea icon {
+  color: #77c8e1;
+  display: inline-block;
+}
+/* line 46, ../sass/screen.sass */
+#triggerArea p {
+  color: #a99a89;
+  display: inline-block;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+/* line 53, ../sass/screen.sass */
+#triggerArea span {
+  color: #77c8e1;
+  text-transform: uppercase;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-weight: lighter;
+}
+/* line 60, ../sass/screen.sass */
 #triggerArea icon {
   line-height: 2em;
 }
 
-/* line 41, ../sass/screen.sass */
+/* line 63, ../sass/screen.sass */
 #titleBar {
-  background-color: white;
+  background-color: #a99a89;
   position: relative;
   height: 0.9em;
   -webkit-box-shadow: 0px 0px 5px #333333;
@@ -69,7 +106,7 @@ body p {
   box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 47, ../sass/screen.sass */
+/* line 69, ../sass/screen.sass */
 #hiddenContent {
   position: absolute;
   bottom: 60%;
@@ -78,17 +115,17 @@ body p {
   text-shadow: 0px 1px 3px black;
 }
 
-/* line 54, ../sass/screen.sass */
+/* line 76, ../sass/screen.sass */
 #yes {
   width: 100%;
   background-color: white;
 }
 
-/* line 58, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 #container {
   width: 100%;
 }
-/* line 60, ../sass/screen.sass */
+/* line 82, ../sass/screen.sass */
 #container .animating {
   -o-transition: -o-transform 0.3s;
   -ms-transition: -ms-transform 0.3s;
@@ -96,31 +133,141 @@ body p {
   -webkit-transition: -webkit-transform 0.3s;
 }
 
-/* line 65, ../sass/screen.sass */
+/* line 87, ../sass/screen.sass */
 #menuBar {
-  -webkit-box-shadow: 0px 0px 5px #333333;
-  -moz-box-shadow: 0px 0px 5px #333333;
-  box-shadow: 0px 0px 5px #333333;
   position: absolute;
+  border-top: 2px solid #a99a89;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: #f3eee9;
   color: black;
   padding: 1em;
   height: 100%;
   width: 100%;
 }
 
-/* line 78, ../sass/screen.sass */
-#portfolioContent {
+/* line 100, ../sass/screen.sass */
+#detailsContainer {
   width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 102, ../sass/screen.sass */
+#detailsContainer #contact {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  text-align: right;
+  margin-top: 1em;
+}
+/* line 106, ../sass/screen.sass */
+#detailsContainer #contact a {
+  text-decoration: none;
+  display: block;
+  font-weight: lighter;
+}
+/* line 112, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+1) {
+  color: #77c8e1;
+}
+/* line 114, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+1):hover {
+  color: #2ca2c6;
+}
+/* line 112, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+2) {
+  color: #a0cf73;
+}
+/* line 114, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+2):hover {
+  color: #6da438;
+}
+/* line 112, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+3) {
+  color: #f69d9f;
+}
+/* line 114, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+3):hover {
+  color: #ed4043;
+}
+/* line 112, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+4) {
+  color: #a99a89;
+}
+/* line 114, ../sass/screen.sass */
+#detailsContainer #contact a:nth-child(4n+4):hover {
+  color: #766756;
+}
+/* line 116, ../sass/screen.sass */
+#detailsContainer #photo {
+  width: 6.77966%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 118, ../sass/screen.sass */
+#detailsContainer #photo img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  height: 6em;
+  margin-top: 0.5em;
+}
+/* line 123, ../sass/screen.sass */
+#detailsContainer #title {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  text-align: left;
+}
+/* line 126, ../sass/screen.sass */
+#detailsContainer #title h1 {
+  font-size: 1.2em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+/* line 131, ../sass/screen.sass */
+#detailsContainer #title h1 span {
+  font-weight: lighter;
+}
+/* line 133, ../sass/screen.sass */
+#detailsContainer #title h2 {
+  font-size: 0.7em;
+  font-weight: lighter;
+}
+/* line 136, ../sass/screen.sass */
+#detailsContainer #title p {
+  color: #473f3b;
+  font-weight: lighter;
+  font-size: 0.5em;
+  text-transform: lowercase;
+}
+
+/* line 141, ../sass/screen.sass */
+#portfolioContent {
   text-align: center;
   overflow-y: auto;
 }
+/* line 144, ../sass/screen.sass */
+#portfolioContent .category {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
 
-/* line 84, ../sass/screen.sass */
+/* line 147, ../sass/screen.sass */
 .portfolioElement {
   display: inline;
   float: left;
@@ -128,16 +275,16 @@ body p {
   width: 18%;
   display: inline-block;
 }
-/* line 89, ../sass/screen.sass */
+/* line 152, ../sass/screen.sass */
 .portfolioElement:after {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 92, ../sass/screen.sass */
+/* line 155, ../sass/screen.sass */
 .portfolioElement p {
   font-size: 14px;
 }
-/* line 94, ../sass/screen.sass */
+/* line 157, ../sass/screen.sass */
 .portfolioElement img {
   max-width: 200px;
   height: auto;

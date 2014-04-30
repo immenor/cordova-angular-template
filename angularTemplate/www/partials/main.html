@@ -1,34 +1,61 @@
 <div id="container" ng-controller="MainCtrl">
-    <h1>Interface Design {{interface.length}}</h1>
-    <p id="hiddenContent">...REVEAL </br> YOURSELF!</p>
-    <div id="titleBar"></div>
-    <img id="yes" src="http://suyts.files.wordpress.com/2012/12/image44.png"/>
+    <div id="detailsContainer">
+        <div id="contact">
+            <a href="">email</a>
+            <a href="">twitter</a>
+            <a href="">tumblr</a>
+            <a href="">linkedIn</a>
+        </div>
+        <div id="photo">
+            <img src="images/clay.png"></img>
+        </div>
+        <div id="title">
+            <h1>Clayton <span>Meador</span></h1>
+            <h2>design / artistic direction / UI & UX</h2>
+            
+            <p>I am an agile designer with strong front-end development skills. I love working with startups. Let's talk!</p>
+
+            <p>Proficient in Adobe photoshop, illustrator, after effects, indesign. Capable front end developer with strong skills in Sass, Compass, semantic HTML, CSS3, JS, JQuery and SEO.</p>
+        </div>
+    </div>
+    
+    
+    
     <div id="menuBar" pull-down the-container="'menuBar'" the-trigger="'triggerArea'">
         <div id="triggerArea">
-            <icon class="fa fa-bars fa-2x"></icon>
-            <!-- <p>I am the...</p> -->
+            <span>CLAYTON MEADOR</span>
+            <icon class="fa fa-play fa-rotate-90"></icon>
+            <p>PULL DOWN FOR DETAILS</p>
+            <icon class="fa fa-play fa-rotate-90"></icon>
+            <span>PROJECT PORTFOLIO</span>
+
         </div>
         <div id="portfolioContent">
-
-            <h1>Interface Design {{interface.length}}</h1>
-            <div ng-repeat="interfaceExample in interfaceExamples" class="portfolioElement">
-                <img ng-src="{{ interfaceExample.image }}" />
-                <p>{{ interfaceExample.name }}</p>
-                <p>{{ interfaceExample.description }}</p>
+            <div class="category">
+                <h2>Interface Design {{interface.length}}</h2>
+                <div ng-repeat="interfaceExample in interfaceExamples" class="portfolioElement">
+                    <img ng-src="{{ interfaceExample.image }}" />
+                    <h3>{{ interfaceExample.name }}</h3>
+                    <p>{{ interfaceExample.description }}</p>
+                </div>
             </div>
 
-            <h1>Identity Design</h1>
-            <div ng-repeat="identityExample in identityExamples" class="portfolioElement">
-                <img ng-src="{{ identityExample.image }}" />
-                <p>{{ identityExample.name }}</p>
-                <p>{{ identityExample.description }}</p>
+            <div class="category">
+                <h2>Identity Design</h2>
+                <div ng-repeat="identityExample in identityExamples" class="portfolioElement">
+                    <img ng-src="{{ identityExample.image }}" />
+                    <h3>{{ identityExample.name }}</h3>
+                    <p>{{ identityExample.description }}</p>
+                </div>
             </div>
 
-            <h1>Music Design {{music.length}}</h1>
-            <div ng-repeat="musicExample in musicExamples" class="portfolioElement">
-                <img ng-src="{{ musicExample.image }}" />
-                <p>{{ musicExample.name }}</p>
-                <p>{{ musicExample.description }}</p>
+            <div class="category">
+                <h2>Music Design {{music.length}}</h2>
+                <div ng-repeat="musicExample in musicExamples" class="portfolioElement">
+                    <img ng-src="{{ musicExample.image }}" />
+                    <h3>{{ musicExample.name }}</h3>
+                    <p>{{ musicExample.description }}</p>
+                </div>
             </div>
 
         </div>
