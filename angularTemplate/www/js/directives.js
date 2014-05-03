@@ -55,7 +55,7 @@ directives.directive('pullDown', function() {
 		},
 		// transclude: true,
 		//template: '<span ng-transclude></span>',
-		controller: function($scope, $log) {
+		controller: function($rootScope, $scope, $log) {
 			var windowHeight = $(window).height();
 			$scope.targetHeight = windowHeight / 6;
 			$scope.container = document.getElementById($scope.theContainer);
@@ -139,6 +139,7 @@ directives.directive('pullDown', function() {
 			                    		$scope.container.className = 'animating';
 			                        	$scope.setHeight($scope.targetHeight);
 			                        	$scope.opened = true;
+			                        	$rootScope.$broadcast('drawOpened');
 			                        	$scope.reset();
 			                        	$scope.originY = $scope.targetHeight;
 			                        	// get ready for your attack run
@@ -152,6 +153,7 @@ directives.directive('pullDown', function() {
 				                        $scope.container.className = 'animating';
 				                        $scope.originY = 0;
 				                        $scope.opened = false;
+				                        $rootScope.$broadcast('drawClosed');
 				                        $scope.setHeight(0);
 				                        $scope.reset();
 				                        // get ready for your attack run
@@ -167,6 +169,7 @@ directives.directive('pullDown', function() {
 			                    		$scope.container.className = 'animating';
 			                        	$scope.setHeight(0);
 			                        	$scope.opened = false;
+			                        	$rootScope.$broadcast('drawClosed');
 			                        	$scope.reset();
 			                        	// get ready for your attack run
 				                        $scope.slidedown_height = 0;	
@@ -181,6 +184,7 @@ directives.directive('pullDown', function() {
 				                        $scope.container.className = 'animating';
 				                        $scope.originY = $scope.targetHeight;
 				                        $scope.opened = true;
+				                        $rootScope.$broadcast('drawOpened');
 				                        $scope.setHeight($scope.targetHeight);
 				                        $scope.reset();	
 				                        // get ready for your attack run

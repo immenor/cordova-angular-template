@@ -59,6 +59,10 @@ body
   +border-radius(50%)
   icon
     line-height: 2em
+  &.drawerOpen
+    background-color: $red
+  &.drawerClosed
+    background-color: $green
 
 #titleBar
   background-color: $secondary-dark
@@ -94,7 +98,6 @@ body
   padding: 0
   background-color: $secondary-light
   color: black
-  padding: 1em
   height: 100%
   width: 100%
 #detailsContainer
@@ -106,7 +109,9 @@ body
     a
       text-decoration: none
       display: block
+      line-height: 1.3em
       font-weight: lighter
+      font-size: .8em
     $colors: $blue , $green, $red, $secondary-dark
     @for $i from 1 through length($colors)
       a:nth-child(#{length($colors)}n+#{$i})
@@ -117,38 +122,44 @@ body
     +span-columns(1, 12)
     img
       +border-radius(50%)
-      height: 6em
+      width: 100%
       margin:
-        top: .5em
+        top: .8em
   #title
     +span-columns(8 omega, 12)
     text-align: left
     h1
-      font-size: 1.2em
+      font-size: 1em
       font-weight: bolder
       text-transform: uppercase
       margin-bottom: 0
       span
         font-weight: lighter
     h2
-      font-size: .7em
+      font-size: .6em
       font-weight: lighter
     p
       color: $secondary-darkest
       font-weight: lighter
       font-size: .5em
+      line-height: .6em
       text-transform: lowercase
 #portfolioContent
   text-align: center
   overflow-y: auto
   .category
     +span-columns(12 omega, 12)
+    h2
+      margin-bottom: 1em
 
-.portfolioElement
-  +float(left)
+div.portfolioElement
+  //+float(left)
+  +span-columns(3, 12)
+  &:nth-child(4)
+    +span-columns(3 omega, 12)
   text-align: center
-  width: 18%
-  display: inline-block
+  //width: 18%
+  //display: inline-block
   &:after
     +clearfix
 
@@ -157,3 +168,44 @@ body
   img
     max-width: 200px
     height: auto
+.drawer
+  +span-columns(12 omega, 12)
+  margin-top: 1em
+  position: relative
+  background-color: $secondary-dark
+  width: 100%
+  color: white
+  text-align: left
+  padding-left: 10%
+  +single-transition(all, .3s)
+  .drawerPhoto
+    +span-columns(4, 12)
+    padding-left: 3em
+    padding-right: 2em
+    padding-top: 2em
+    padding-bottom: 1em
+    img
+      width: 100%
+  .drawerContent
+    +span-columns(8 omega, 12)
+  .arrow
+    +arrow(35px, 20px, up, $secondary-dark)
+    position: absolute
+    top: -.75em
+    left: 18.7%
+    -webkit-transition: all linear 0.5s
+    transition: all linear 0.5s
+
+.animate-hide
+  -webkit-transition: all linear 0.5s
+  transition: all linear 0.5s
+  opacity: 1
+
+.animate-hide.ng-hide-add, .animate-hide.ng-hide-remove
+  display: block !important
+
+.animate-hide.ng-hide
+  opacity: 0
+  height: 0px
+ 
+

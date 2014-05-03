@@ -95,8 +95,16 @@ body h3 {
 #triggerArea icon {
   line-height: 2em;
 }
+/* line 62, ../sass/screen.sass */
+#triggerArea.drawerOpen {
+  background-color: #f69d9f;
+}
+/* line 64, ../sass/screen.sass */
+#triggerArea.drawerClosed {
+  background-color: #a0cf73;
+}
 
-/* line 63, ../sass/screen.sass */
+/* line 67, ../sass/screen.sass */
 #titleBar {
   background-color: #a99a89;
   position: relative;
@@ -106,7 +114,7 @@ body h3 {
   box-shadow: 0px 0px 5px #333333;
 }
 
-/* line 69, ../sass/screen.sass */
+/* line 73, ../sass/screen.sass */
 #hiddenContent {
   position: absolute;
   bottom: 60%;
@@ -115,17 +123,17 @@ body h3 {
   text-shadow: 0px 1px 3px black;
 }
 
-/* line 76, ../sass/screen.sass */
+/* line 80, ../sass/screen.sass */
 #yes {
   width: 100%;
   background-color: white;
 }
 
-/* line 80, ../sass/screen.sass */
+/* line 84, ../sass/screen.sass */
 #container {
   width: 100%;
 }
-/* line 82, ../sass/screen.sass */
+/* line 86, ../sass/screen.sass */
 #container .animating {
   -o-transition: -o-transform 0.3s;
   -ms-transition: -ms-transform 0.3s;
@@ -133,7 +141,7 @@ body h3 {
   -webkit-transition: -webkit-transform 0.3s;
 }
 
-/* line 87, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 #menuBar {
   position: absolute;
   border-top: 2px solid #a99a89;
@@ -143,12 +151,11 @@ body h3 {
   padding: 0;
   background-color: #f3eee9;
   color: black;
-  padding: 1em;
   height: 100%;
   width: 100%;
 }
 
-/* line 100, ../sass/screen.sass */
+/* line 103, ../sass/screen.sass */
 #detailsContainer {
   width: 100%;
   float: right;
@@ -156,7 +163,7 @@ body h3 {
   *margin-left: -1em;
   display: inline;
 }
-/* line 102, ../sass/screen.sass */
+/* line 105, ../sass/screen.sass */
 #detailsContainer #contact {
   width: 23.72881%;
   float: left;
@@ -165,62 +172,64 @@ body h3 {
   text-align: right;
   margin-top: 1em;
 }
-/* line 106, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 #detailsContainer #contact a {
   text-decoration: none;
   display: block;
+  line-height: 1.3em;
   font-weight: lighter;
+  font-size: 0.8em;
 }
-/* line 112, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+1) {
   color: #77c8e1;
 }
-/* line 114, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+1):hover {
   color: #2ca2c6;
 }
-/* line 112, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+2) {
   color: #a0cf73;
 }
-/* line 114, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+2):hover {
   color: #6da438;
 }
-/* line 112, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+3) {
   color: #f69d9f;
 }
-/* line 114, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+3):hover {
   color: #ed4043;
 }
-/* line 112, ../sass/screen.sass */
+/* line 117, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+4) {
   color: #a99a89;
 }
-/* line 114, ../sass/screen.sass */
+/* line 119, ../sass/screen.sass */
 #detailsContainer #contact a:nth-child(4n+4):hover {
   color: #766756;
 }
-/* line 116, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 #detailsContainer #photo {
   width: 6.77966%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-/* line 118, ../sass/screen.sass */
+/* line 123, ../sass/screen.sass */
 #detailsContainer #photo img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  height: 6em;
-  margin-top: 0.5em;
+  width: 100%;
+  margin-top: 0.8em;
 }
-/* line 123, ../sass/screen.sass */
+/* line 128, ../sass/screen.sass */
 #detailsContainer #title {
   width: 66.10169%;
   float: right;
@@ -229,36 +238,37 @@ body h3 {
   display: inline;
   text-align: left;
 }
-/* line 126, ../sass/screen.sass */
+/* line 131, ../sass/screen.sass */
 #detailsContainer #title h1 {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bolder;
   text-transform: uppercase;
   margin-bottom: 0;
 }
-/* line 131, ../sass/screen.sass */
+/* line 136, ../sass/screen.sass */
 #detailsContainer #title h1 span {
   font-weight: lighter;
 }
-/* line 133, ../sass/screen.sass */
+/* line 138, ../sass/screen.sass */
 #detailsContainer #title h2 {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: lighter;
 }
-/* line 136, ../sass/screen.sass */
+/* line 141, ../sass/screen.sass */
 #detailsContainer #title p {
   color: #473f3b;
   font-weight: lighter;
   font-size: 0.5em;
+  line-height: 0.6em;
   text-transform: lowercase;
 }
 
-/* line 141, ../sass/screen.sass */
+/* line 147, ../sass/screen.sass */
 #portfolioContent {
   text-align: center;
   overflow-y: auto;
 }
-/* line 144, ../sass/screen.sass */
+/* line 150, ../sass/screen.sass */
 #portfolioContent .category {
   width: 100%;
   float: right;
@@ -266,26 +276,112 @@ body h3 {
   *margin-left: -1em;
   display: inline;
 }
-
-/* line 147, ../sass/screen.sass */
-.portfolioElement {
-  display: inline;
-  float: left;
-  text-align: center;
-  width: 18%;
-  display: inline-block;
-}
 /* line 152, ../sass/screen.sass */
-.portfolioElement:after {
+#portfolioContent .category h2 {
+  margin-bottom: 1em;
+}
+
+/* line 155, ../sass/screen.sass */
+div.portfolioElement {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  text-align: center;
+}
+/* line 158, ../sass/screen.sass */
+div.portfolioElement:nth-child(4) {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 163, ../sass/screen.sass */
+div.portfolioElement:after {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 155, ../sass/screen.sass */
-.portfolioElement p {
+/* line 166, ../sass/screen.sass */
+div.portfolioElement p {
   font-size: 14px;
 }
-/* line 157, ../sass/screen.sass */
-.portfolioElement img {
+/* line 168, ../sass/screen.sass */
+div.portfolioElement img {
   max-width: 200px;
   height: auto;
+}
+
+/* line 171, ../sass/screen.sass */
+.drawer {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+  margin-top: 1em;
+  position: relative;
+  background-color: #a99a89;
+  width: 100%;
+  color: white;
+  text-align: left;
+  padding-left: 10%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 181, ../sass/screen.sass */
+.drawer .drawerPhoto {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding-left: 3em;
+  padding-right: 2em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+/* line 187, ../sass/screen.sass */
+.drawer .drawerPhoto img {
+  width: 100%;
+}
+/* line 189, ../sass/screen.sass */
+.drawer .drawerContent {
+  width: 66.10169%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 191, ../sass/screen.sass */
+.drawer .arrow {
+  width: 0;
+  height: 0;
+  border-left: 17.5px solid transparent;
+  border-right: 17.5px solid transparent;
+  border-bottom: 20px solid #a99a89;
+  position: absolute;
+  top: -0.75em;
+  left: 18.7%;
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+/* line 199, ../sass/screen.sass */
+.animate-hide {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  opacity: 1;
+}
+
+/* line 204, ../sass/screen.sass */
+.animate-hide.ng-hide-add, .animate-hide.ng-hide-remove {
+  display: block !important;
+}
+
+/* line 207, ../sass/screen.sass */
+.animate-hide.ng-hide {
+  opacity: 0;
+  height: 0px;
 }

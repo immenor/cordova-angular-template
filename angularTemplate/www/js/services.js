@@ -4,11 +4,10 @@ angular.module('template.services', []).
     factory('portfolioContentService', function($log) {
         return {
             interfaceExamples:  {
-                promo: { name: 'flava', image: 'images/flava.png', large: null, larger: null, description: null},
-                canary: { name: 'moniker', image: 'images/moniker.jpg', large: null, larger: null, description: null},
-                analytics: { name: 'gap', image: 'images/gap.jpg', large: null, larger: null, description: null},
-                skuloop: { name: 'skuloop', image: 'images/sayagain.jpg', large: null, larger: null, description: null},
-                shopping: { name: 'shopping', image: 'images/sbr.png', large: null, larger: null, description: null}
+                promo: { name: 'promo', image: 'images/flava.png', large: null, larger: null, description: null},
+                canary: { name: 'canary', image: 'images/moniker.jpg', large: null, larger: null, description: null},
+                analytics: { name: 'analytics', image: 'images/gap.jpg', large: null, larger: null, description: null},
+                skuloop: { name: 'skuloop', image: 'images/flava.png', large: null, larger: null, description: null}, 
                 
             },
             identityExamples: {

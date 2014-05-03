@@ -10,7 +10,7 @@
             <img src="images/clay.png"></img>
         </div>
         <div id="title">
-            <h1>Clayton <span>Meador</span></h1>
+            <h1>Clayton<span>Meador</span></h1>
             <h2>design / artistic direction / UI & UX</h2>
             
             <p>I am an agile designer with strong front-end development skills. I love working with startups. Let's talk!</p>
@@ -34,10 +34,26 @@
             <div class="category">
                 <h2>Interface Design {{interface.length}}</h2>
                 <div ng-repeat="interfaceExample in interfaceExamples" class="portfolioElement">
-                    <img ng-src="{{ interfaceExample.image }}" />
+                    <a ng-href="javascript:void()" ng-click="selectPortfolioItem(interfaceExample.name, 'interface')">
+                        <img ng-src="{{ interfaceExample.image }}" />
+                    </a>
                     <h3>{{ interfaceExample.name }}</h3>
                     <p>{{ interfaceExample.description }}</p>
                 </div>
+            </div>
+
+            <div class="drawer animate-hide" ng-hide="currentChoice.name === '' ">
+                <div class="arrow"></div>
+
+                <div class="drawerPhoto">
+                   <img ng-src="{{ currentChoice.image }}" ></img>
+                </div>
+
+                <div class="drawerContent">
+                    <h2>{{ currentChoice.name }}</h2>
+                    <p>{{ currentChoice.description }}</p>
+                </div>
+
             </div>
 
             <div class="category">
