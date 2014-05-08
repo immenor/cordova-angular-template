@@ -3,7 +3,7 @@
 
 @import base
 body
-  font-family: "Futura","HelvetiicaNeueLT Std Thin", sans-serif
+  font-family: "HelvetiicaNeueLT Std Thin", "Futura", sans-serif
   font-size: 1.5em
   color: $base
   background-color: $secondary-light
@@ -175,24 +175,22 @@ div.portfolioElement
     height: auto
 .drawer
   +span-columns(12 omega, 12)
+  +box-sizing(border-box)
+  padding: 1em
   margin-top: 1em
   position: relative
   background-color: $secondary-dark
-  width: 100%
-  color: white
-  text-align: left
-  padding-left: 10%
+  width: 100%  
+  text-align: left  
   +single-transition(all, .3s)
   .drawerPhoto
-    +span-columns(4, 12)
-    padding-left: 3em
-    padding-right: 2em
-    padding-top: 2em
-    padding-bottom: 1em
+    +span-columns(12 omega, 12)
     img
-      width: 100%
+      max-width: 100%
   .drawerContent
-    +span-columns(8 omega, 12)
+    +span-columns(12 omega, 12)
+    h2, p
+      color: white
   .arrow
     +arrow(35px, 20px, up, $secondary-dark)
     position: absolute

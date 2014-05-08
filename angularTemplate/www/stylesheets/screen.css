@@ -1,6 +1,6 @@
 /* line 5, ../sass/screen.sass */
 body {
-  font-family: "Futura", "HelvetiicaNeueLT Std Thin", sans-serif;
+  font-family: "HelvetiicaNeueLT Std Thin", "Futura", sans-serif;
   font-size: 1.5em;
   color: #473f3b;
   background-color: #f3eee9;
@@ -336,13 +336,15 @@ div.portfolioElement img {
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
   margin-top: 1em;
   position: relative;
   background-color: #a99a89;
   width: 100%;
-  color: white;
   text-align: left;
-  padding-left: 10%;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -350,28 +352,29 @@ div.portfolioElement img {
 }
 /* line 186, ../sass/screen.sass */
 .drawer .drawerPhoto {
-  width: 31.42857%;
-  float: left;
-  margin-right: 2.85714%;
-  display: inline;
-  padding-left: 3em;
-  padding-right: 2em;
-  padding-top: 2em;
-  padding-bottom: 1em;
-}
-/* line 192, ../sass/screen.sass */
-.drawer .drawerPhoto img {
   width: 100%;
-}
-/* line 194, ../sass/screen.sass */
-.drawer .drawerContent {
-  width: 65.71429%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-/* line 196, ../sass/screen.sass */
+/* line 188, ../sass/screen.sass */
+.drawer .drawerPhoto img {
+  max-width: 100%;
+}
+/* line 190, ../sass/screen.sass */
+.drawer .drawerContent {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 192, ../sass/screen.sass */
+.drawer .drawerContent h2, .drawer .drawerContent p {
+  color: white;
+}
+/* line 194, ../sass/screen.sass */
 .drawer .arrow {
   width: 0;
   height: 0;
@@ -385,19 +388,19 @@ div.portfolioElement img {
   transition: all linear 0.5s;
 }
 
-/* line 204, ../sass/screen.sass */
+/* line 202, ../sass/screen.sass */
 .animate-hide {
   -webkit-transition: all linear 0.5s;
   transition: all linear 0.5s;
   opacity: 1;
 }
 
-/* line 209, ../sass/screen.sass */
+/* line 207, ../sass/screen.sass */
 .animate-hide.ng-hide-add, .animate-hide.ng-hide-remove {
   display: block !important;
 }
 
-/* line 212, ../sass/screen.sass */
+/* line 210, ../sass/screen.sass */
 .animate-hide.ng-hide {
   opacity: 0;
   height: 0px;

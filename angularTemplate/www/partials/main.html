@@ -31,19 +31,8 @@
 
         </div>
         <div id="portfolioContent">
-            <div class="category">
-                <h2>Interface Design {{interface.length}}</h2>
-                <div ng-repeat="interfaceExample in interfaceExamples" class="portfolioElement">
-                    <a ng-href="javascript:void()" ng-click="selectPortfolioItem(interfaceExample.name, 'interface')">
-                        <img ng-src="{{ interfaceExample.image }}" />
-                    </a>
-                    <h3>{{ interfaceExample.name }}</h3>
-                    <p>{{ interfaceExample.description }}</p>
-                </div>
-            </div>
-
             <div class="drawer animate-hide" ng-hide="currentChoice.name === '' ">
-                <div class="arrow"></div>
+                <!-- <div class="arrow"></div> -->
 
                 <div class="drawerPhoto">
                    <img ng-src="{{ currentChoice.image }}" ></img>
@@ -55,13 +44,25 @@
                 </div>
 
             </div>
+            <div class="category">
+                <h2>Interface Design {{interface.length}}</h2>
+                <div ng-repeat="interfaceExample in interfaceExamples" class="portfolioElement">
+                    <a ng-href="javascript:void()" ng-click="selectPortfolioItem(interfaceExample.name, 'interface')">
+                        <img ng-src="{{ interfaceExample.image }}" />
+                    </a>
+                    <h3>{{ interfaceExample.name }}</h3>
+                    
+                </div>
+            </div>
+
+            
 
             <div class="category">
                 <h2>Identity Design</h2>
                 <div ng-repeat="identityExample in identityExamples" class="portfolioElement">
                     <img ng-src="{{ identityExample.image }}" />
                     <h3>{{ identityExample.name }}</h3>
-                    <p>{{ identityExample.description }}</p>
+                    
                 </div>
             </div>
 
@@ -70,7 +71,7 @@
                 <div ng-repeat="musicExample in musicExamples" class="portfolioElement">
                     <img ng-src="{{ musicExample.image }}" />
                     <h3>{{ musicExample.name }}</h3>
-                    <p>{{ musicExample.description }}</p>
+                    
                 </div>
             </div>
 
