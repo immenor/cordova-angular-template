@@ -14,7 +14,7 @@ angular.module('template.services', []).
             },
             identityExamples: {
                 sayagain: { name: 'sayagain', image: 'images/flava.png', large: null, larger: null, description: null},
-                //solidbump: { name: 'solidbump', image: 'images/flava.png', large: null, larger: null, description: null},
+                solidbump: { name: 'solidbump', image: 'images/flava.png', large: null, larger: null, description: null},
                 skuloop: { name: 'skuloop', image: 'images/flava.png', large: null, larger: null, description: null},
                 machocity: { name: 'machocity', image: 'images/flava.png', large: null, larger: null, description: null},
                 hoover: { name: 'hoover', image: 'images/flava.png', large: null, larger: null, description: null},
@@ -23,6 +23,8 @@ angular.module('template.services', []).
             musicExamples: {
                 solidbump: { name: 'solidbump', image: 'images/flava.png', large: null, larger: null, description: null},
                 smashhit: { name: 'smashhit', image: 'images/flava.png', large: null, larger: null, description: null},
+                test: { name: 'test', image: 'images/gap.jpg', large: null, larger: null, description: null},
+                skuloop: { name: 'skuloop', image: 'images/flava.png', large: null, larger: null, description: null}, 
                 iris: { name: 'iris', image: 'images/flava.png', large: null, larger: null, description: null}
             }
     }
