@@ -6,7 +6,7 @@ body
   font-family: "Futura","HelvetiicaNeueLT Std Thin", sans-serif
   font-size: 1.5em
   color: $base
-  background-color: white
+  background-color: $secondary-light
   margin: 0px
   padding: 0px
   p
@@ -22,18 +22,18 @@ body
     color: $secondary-darkest
     font-size: .5em
     text-transform: uppercase
-.container
+#container
   +container
-  //+susy-grid-background
+  max-width: 40em//+susy-grid-background
 
 .app
   position: absolute             /* position in the center of the screen */
   left: 0
   top: 0
   width: 100%
-  height: 100%
+  //height: 100%
   //height: 400px
-  overflow: hidden
+  //overflow: hidden
 #triggerArea
   position: relative
   margin-left: auto
@@ -90,6 +90,7 @@ body
     -webkit-transition: -webkit-transform .3s
 #menuBar
   //+box-shadow
+
   position: absolute
   border-top: 2px solid $secondary-dark
   top: 0
@@ -145,8 +146,12 @@ body
       line-height: .6em
       text-transform: lowercase
 #portfolioContent
+  +container
   text-align: center
   overflow-y: auto
+  img
+    max-width: 100%
+    height: auto
   .category
     +span-columns(12 omega, 12)
     h2
@@ -154,9 +159,9 @@ body
 
 div.portfolioElement
   //+float(left)
-  +span-columns(3, 12)
-  &:nth-child(4)
-    +span-columns(3 omega, 12)
+  +span-columns(2, 12)
+  &:nth-child(6)
+    +span-columns(2 omega, 12)
   text-align: center
   //width: 18%
   //display: inline-block

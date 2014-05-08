@@ -8,6 +8,8 @@ angular.module('template.services', []).
                 canary: { name: 'canary', image: 'images/moniker.jpg', large: null, larger: null, description: null},
                 analytics: { name: 'analytics', image: 'images/gap.jpg', large: null, larger: null, description: null},
                 skuloop: { name: 'skuloop', image: 'images/flava.png', large: null, larger: null, description: null}, 
+                test: { name: 'test', image: 'images/gap.jpg', large: null, larger: null, description: null},
+                thing: { name: 'thing', image: 'images/gap.jpg', large: null, larger: null, description: null}
                 
             },
             identityExamples: {
